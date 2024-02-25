@@ -31,6 +31,15 @@ To set up the project environment, run the following command to install the requ
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn
 
+Additional Installation
+For deploying the machine learning model as an API and testing it locally, the following libraries are also required:
+
+Flask: A lightweight WSGI web application framework.
+Gunicorn: A Python WSGI HTTP Server for UNIX.
+These can be installed using the following command in bash:
+pip install flask gunicorn
+
+
 ## Dataset Source
 The dataset was obtained from the UCI Machine Learning Repository:
 
@@ -61,9 +70,26 @@ The Random Forest and Decision Tree models demonstrated the highest accuracy in 
 Contributing
 Contributions to this project are welcome. Please fork the repository and submit a pull request.
 
+
+Model Deployment and API
+We have developed an API to make predictions using the trained model. This API is built using Flask and can be tested on a local host.
+
+Saving the Trained Model
+The trained model is saved using joblib, which allows us to serialize Python objects. This makes it easy to load the model for future predictions without retraining.
+
+Creating the API
+The API accepts JSON input containing the necessary features for prediction and returns the prediction result. The Flask framework is used to create the API, allowing for easy testing and deployment.
+
+Testing the API Locally
+To test the API locally, run the Flask application. You can then use tools like Postman or a simple curl command to send requests to your local server and receive predictions.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 ## Acknowledgments
 Heart Disease UCI Dataset from Kaggle
 Contributions from the open-source community
+
+
+
+
