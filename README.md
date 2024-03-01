@@ -23,7 +23,7 @@ The `heart_data` dataset includes the following features:
 
 ## Prerequisites
 - Python 3.6 or above
-- Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
+- Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn, streamlit
 
 ## Installation
 To set up the project environment, run the following command to install the required packages:
@@ -82,6 +82,16 @@ The API accepts JSON input containing the necessary features for prediction and 
 
 Testing the API Locally
 To test the API locally, run the Flask application. You can then use tools like Postman or a simple curl command to send requests to your local server and receive predictions.
+
+Interactive Web Application
+1.This repository includes a sophisticated web application built with Streamlit, which provides a dynamic and intuitive interface for heart disease risk prediction. To utilize the web application:
+"pip install streamlit"
+2.To initiate the web application, execute the command below in your terminal:
+First, ensure Streamlit is installed by running the following command:
+"streamlit run streamlit2_web.py"
+3.Upon launch, the application will prompt you to input relevant health metrics. After entering the data, click on the 'Predict' button to generate your heart disease risk assessment.
+*****NOTE***: The provided predictive model is for educational purposes and should not be construed as medical advice. Always consult healthcare professionals for health-related inquiries.
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
